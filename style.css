@@ -1,0 +1,250 @@
+/* ************************************************
+TABLE OF CONTENTS
+** - Root styling
+** - Body Area
+** - Component Area
+** - Credit Area
+************************************************ */
+
+/* ================================================
+ROOT STYLING
+================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --p-color: hsl(215, 51%, 70%);
+    --currency-color: hsl(178, 100%, 50%);
+    --p-font-size: 18px;
+    --family: 'Outfit', sans-serif;
+    --s-font-weight: 600;
+    --t-font-weight: 300; 
+    --f-font-weight: 400;    
+}
+
+/* ================================================
+BODY AREA
+================================================ */
+body{
+    font-family: var(--family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-bg);
+}
+
+/* ================================================
+COMPONENT AREA
+================================================ */
+.comp{
+    background-color: var(--card-bg);
+    width: 21.5%;
+    padding: 1.5%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 30px 2px 20px rgb(12, 23,41), 0px 30px 4px 50px rgb(12, 24,42);
+    /* rgb(12, 23,41) */
+    /* rgb(12, 25,44) */
+}
+
+.main-img{
+    width: 100%;
+    height: 10%;
+    border-radius: 2%;
+}
+
+.main-img:hover{
+    cursor:pointer;  
+}
+
+.container{
+    position: relative;
+}
+
+.overlay{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /* transition: 0.5s ease;     */
+}
+
+.container:hover .overlay{
+    opacity: 1;
+    background-color: rgba(0, 255, 247, 60%);
+    cursor: pointer;
+}
+
+.overlay-svg{
+    /* opacity: 1; */
+    color: white;
+}
+
+.comp h3{
+    color: var(--white);
+    font-weight: var(--s-font-weight);
+    
+}
+
+.comp h3:hover{
+    color: var(--currency-color);
+    cursor:pointer;    
+}
+
+.main-info{
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--t-font-weight);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    /* font-size: var(--p-font-size); */
+
+}
+
+.stat-1, .stat-2{
+    display: flex;
+    justify-content: left;
+}
+
+.stat-1 svg, .stat-2 svg{
+    margin-right: 8px;
+}
+
+.stat-1 span{
+    color: var(--currency-color);
+    font-weight: var(--s-font-weight);
+}
+
+.stat-2 span{
+    color: var(--p-color);
+    font-weight: var(--f-font-weight);
+}
+
+.line{
+    background-color: var(--line-color);
+    height: 1px;
+    border-radius: 0.5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* ================================================
+CREDIT AREA
+================================================ */
+.credit{
+    display: flex;
+    align-items: center;
+    font-weight: var(--c-font-weight);
+    /* font-size: var(--p-font-size); */
+}
+
+.credit img{
+    width: 10%;
+    border: solid white 1px;
+    border-radius: 50%;
+    margin-right: 18px;
+}
+
+.owner{
+    color: white;
+}
+
+.owner:hover{
+    color: var(--currency-color);
+    cursor:pointer;
+}
+
+.owner span{
+    color: var(--p-color);
+}
+
+
+
+/* ================================================
+Mobile View Settings (max-width: 1054px)
+================================================ */
+@media only screen and (max-width: 1055px){
+    .comp{
+        width: 30%;
+        padding: 3.5%;
+        border-radius: 3.5%;
+    }
+    
+    .main-img{
+        /* width: 100%;
+        height: 10%; */
+        border-radius: 3.5%;
+    }
+    
+    .comp h3{
+        font-size: 24px;
+        
+    }
+    
+    .main-info{
+        font-size: 18px;
+    }
+    
+    .line{
+        height: 1.5px;
+        border-radius: 0.8px;
+    }
+
+    
+    .credit img{
+        width: 11%;
+    }
+    
+}
+
+
+/* ================================================
+Mobile View Settings (max-width: 700px)
+================================================ */
+@media only screen and (max-width: 700px){
+    .comp{
+        width: 80%;
+        padding: 5.5%;
+        border-radius: 3.5%;
+    }
+    
+    .main-img{
+        /* width: 100%;
+        height: 10%; */
+        border-radius: 3.5%;
+    }
+    
+    .comp h3{
+        font-size: 23px;
+        
+    }
+    
+    .main-info{
+        font-size: 17px;
+    }
+    
+    .line{
+        height: 1.5px;
+        border-radius: 0.8px;
+    }
+
+    
+    .credit img{
+        width: 11%;
+    }
+}
